@@ -1,0 +1,9 @@
+{
+  "name": "brehon",
+  "outputfilename": "brehon",
+  "wailsjsdir": "./frontend",
+  "author": {
+    "name": "DrGylfin",
+    "email": "99512081+DrGylfin@users.noreply.github.com"
+  }
+}
