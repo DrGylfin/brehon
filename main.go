@@ -19,14 +19,19 @@ var assets embed.FS
 var icon []byte
 
 func main() {
+
 	// Create an instance of the app structure
 	app := NewApp()
+
+	// Struct for file handling
+	// TODO: populate struct's values from preferences or defaults
+	fileHandler := &FileHandler{}
 
 	// Create application with options
 	err := wails.Run(&options.App{
 		Title:             "brehon",
-		Width:             720,
-		Height:            570,
+		Width:             1280,
+		Height:            740,
 		MinWidth:          720,
 		MinHeight:         570,
 		MaxWidth:          1280,
@@ -43,7 +48,7 @@ func main() {
 		OnDomReady:        app.domReady,
 		OnShutdown:        app.shutdown,
 		Bind: []interface{}{
-			app,
+			app, fileHandler,
 		},
 		// Windows platform specific options
 		Windows: &windows.Options{
@@ -53,11 +58,11 @@ func main() {
 		},
 		Mac: &mac.Options{
 			TitleBar:             mac.TitleBarHiddenInset(),
-			WebviewIsTransparent: true,
+			WebviewIsTransparent: false,
 			WindowIsTranslucent:  true,
 			About: &mac.AboutInfo{
-				Title:   "Vanilla Template",
-				Message: "Part of the Wails projects",
+				Title:   "Brehon",
+				Message: "A to-do list tracker and chooser",
 				Icon:    icon,
 			},
 		},

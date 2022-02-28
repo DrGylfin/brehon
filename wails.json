@@ -1,9 +1,20 @@
 {
   "name": "brehon",
-  "outputfilename": "brehon",
+  "frontend:build": "",
+  "frontend:install": "",
+  "frontend:dev": "",
   "wailsjsdir": "./frontend",
-  "author": {
+  "version": "2",
+  "Path": "",
+  "BuildDir": "",
+  "outputfilename": "brehon",
+  "OutputType": "",
+  "Platform": "",
+  "Author": {
     "name": "DrGylfin",
-    "email": "99512081+DrGylfin@users.noreply.github.com"
-  }
+    "email": ""
+  },
+  "debounceMS": 100,
+  "devserverurl": "http://localhost:34115",
+  "appargs": ""
 }

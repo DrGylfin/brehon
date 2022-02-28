@@ -5,15 +5,34 @@
   <link rel="stylesheet" href="/main.css">
 </head>
 
-<body data-wails-drag>
-  <div class="logo"></div>
-  <div class="result" id="result">Please enter your name below 👇</div>
-  <div class="input-box" id="input" data-wails-no-drag>
-    <input class="input" id="name" type="text" autocomplete="off">
-    <button class="btn" onclick="greet()">Greet</button>
-  </div>
+<body data-wails-drag onload="getItemsFromFile()">
 
-  <script src="/main.js"></script>
+<h1>Task Picker</h1>
+
+<div id='save' class='bttn'>Save</div>
+
+<hr />
+
+<div id='list-container'>
+<ul id='thelist' class='todo-list'></ul>
+</div>
+<div id='random' class='bttn'>Pick One</div>
+<div id='item-editor' data-wails-no-drag>
+<div class='item-row'><div class='data-type'>Text</div><input type='text' id='item-text'></div>
+<div class='item-row'><div class='data-type'>Category</div><input type='text' id='item-cat'></div>
+<div class='item-row'><div class='data-type'>Time</div><input type='text' id='item-time'></div>
+<div class='bttn' id='add-button'>Add to list</div>
+<div id='clear' class='bttn'>Clear</div>
+</div>
+<div id='show-selected'></div>
+<div id='show' class='bttn' >Open editor</div>
+	<script>
+	// global variables
+	// TODO: move these to a master js file, have other js files export their functions
+	const todoList = document.getElementById('thelist');
+	const debugText = document.getElementById('debug');
+	</script>
+	<script src='/todo.js'></script>
+	<script src='/ui.js'></script>
 </body>
-
 </html>

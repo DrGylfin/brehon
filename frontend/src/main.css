@@ -1,7 +1,7 @@
 html {
-  background-color: rgba(33, 37, 43, 0.2);
+  background-color: rgba(11, 9, 10, 100);
   text-align: center;
-  color: white;
+  color: rgba(211, 211, 211, 100);
 }
 
 body {
@@ -12,61 +12,87 @@ body {
   overscroll-behavior: none;
 }
 
-@font-face {
-  font-family: "Nunito";
-  font-style: normal;
-  font-weight: 400;
-  src: local(""),
-    url("assets/fonts/nunito-v16-latin-regular.woff2") format("woff2");
+.bttn {
+	
+	padding: 10px;
+	background: rgba(22, 26, 29, 100);
+	width: 70px;
+	margin: 0 auto 0 auto;
+	
 }
 
-.logo {
-  display: block;
-  width: 35%;
-  height: 35%;
-  margin: auto;
-  padding: 15% 0 0;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("./assets/images/logo-dark.svg");
-}
-.result {
-  height: 20px;
-  line-height: 20px;
-  margin: 1.5rem auto;
-}
-.input-box .btn {
-  width: 60px;
-  height: 30px;
-  line-height: 30px;
-  border-radius: 3px;
-  border: none;
-  margin: 0 0 0 20px;
-  padding: 0 8px;
-  cursor: pointer;
-}
-.input-box .btn:hover {
-  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-  color: #333333;
+#item-editor {
+	
+	/*display: none;*/
+	border: 1px solid white;
+	margin: 30px 0 0 5%;
+	width: 40%;
+	padding: 0;
+
 }
 
-.input-box .input {
-  border: none;
-  border-radius: 3px;
-  outline: none;
-  height: 30px;
-  line-height: 30px;
-  padding: 0 10px;
-  background-color: rgba(240, 240, 240, 1);
-  -webkit-font-smoothing: antialiased;
+.item-row {
+	
+	display: flex;
+	
 }
 
-.input-box .input:hover {
-  border: none;
-  background-color: rgba(255, 255, 255, 1);
+.data-type {
+	
+	background-color: #333;
+	padding: 10px;
+	margin: 0 1em 0 0;
+	min-width: 100px;
+	
 }
 
-.input-box .input:focus {
-  border: none;
-  background-color: rgba(255, 255, 255, 1);
+.item-row > input {
+	
+	background-color: rgba(11, 9, 10, 100);
+	font-size: 1.25em;
+	color: rgba(211, 211, 211, 100);
+	border: 1px solid red;
+	width: 75%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	border-bottom: 1px solid red;
+	
+}
+
+.item-row > input:focus {
+	
+	outline: none;
+	
+}
+
+
+#list-container {
+	width: 30%;
+	margin: 5px 0 0 5%;
+}
+
+#thelist {
+	list-style-type: none;
+	margin: 0 0 15px 0;
+	padding: 0;
+}
+
+	#thelist li {
+		color: black;
+		background-color: rgba(102, 7, 8, 100);
+		margin: 0;
+		padding: 10px 0 10px 0;
+	}
+	
+	#thelist li:hover {
+		background-color: rgba(164, 22, 26, 100);
+	}
+
+#debug {
+	
+	font-family: monospace;
+	font-size: 1.25em;
+	margin: 2em 0 2em 0;
+		
 }
